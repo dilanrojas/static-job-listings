@@ -1,0 +1,9 @@
+.jobs-section {
+  padding-block: 4.5rem;
+}
+
+@media (width <= 528px) {
+  .jobs-section {
+    --flow-space: 3rem;
+  }
+}

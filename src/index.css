@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root {
+  --ff-html: "League Spartan", serif;
+
+  --ds-d-cyan: hsl(180, 29%, 50%);
+  --vl-gsh-cyan: hsl(180, 52%, 96%);
+  --l-gsh-cyan: hsl(180, 31%, 95%);
+  --d-gsh-cyan: hsl(180, 8%, 52%);
+  --vd-gsh-cyan: hsl(180, 14%, 20%);
+}
+
+html {
+  font-size: 15px;
+  line-height: 1.5;
+  font-family: var(--ff-html);
+  overflow-x: hidden;
+  color: var(--vd-gsh-cyan);
+  scrollbar-gutter: stable;
+  background-color: var(--l-gsh-cyan)
+}
+
+body {
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+span {
+  display: block;
+  text-wrap-mode: nowrap;
+}
+
+@media (width <= 640px) {
+  span {
+    text-wrap-mode: wrap;
+  }
+}
+
+/* Utility classes */
+.wrapper {
+  --width: var(--custom-width, 1025px);
+  --padding: var(--custom-padding, 2rem);
+
+  width: min(var(--width), 100% - var(--padding) * 2);
+  margin-inline: auto;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1.5rem)
+}
